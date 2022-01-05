@@ -5,7 +5,11 @@ import { ButtonText } from '../../components/ButtonText';
 import { Button } from '../../components/Button';
 import { Input } from '../../components/Input';
 
-export function SignIn() {
+interface ButtonSigin {
+  handleAuthLogin: () => void;
+}
+
+export function SignIn({ handleAuthLogin }: ButtonSigin) {
   return (
     <Container>
       <Title>MyShopping</Title>
@@ -20,7 +24,7 @@ export function SignIn() {
         keyboardType="email-address"
       />
 
-      <Button title="Entrar" onPress={() => { }} />
+      <Button title="Entrar" onPress={handleAuthLogin} />
 
       <Account>
         <ButtonText title="Recuperar senha" onPress={() => { }} />

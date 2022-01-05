@@ -1,10 +1,12 @@
-import React from 'react';
-
+import React, { useState } from 'react';
+import firestore from '@react-native-firebase/firestore';
 import { Container } from './styles';
 import { ButtonIcon } from '../ButtonIcon';
 import { Input } from '../Input';
 
 export function FormBox() {
+  const [productName, setProductName] = useState('TESTANTO')
+
   return (
     <Container>
       <Input
